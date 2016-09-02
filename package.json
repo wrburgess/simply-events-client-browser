@@ -2,10 +2,18 @@
   "name": "simply-events-client-browser",
   "version": "0.1.0",
   "description": "Browser client for Simply Events",
+  "repository": "https://github.com/wrburgess/simply-events-client-browser.git",
   "main": "index.js",
   "scripts": {
     "test": "test"
   },
   "author": "Randy Burgess <wrburgess@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
+  },
+  "devDependencies": {
+    "mocha": "^3.0.2"
+  }
 }
