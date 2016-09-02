@@ -1,0 +1,11 @@
+{
+  "name": "simply-events-client-browser",
+  "version": "0.0.1",
+  "description": "Browser client for Simply Events",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Randy Burgess <wrburgess@gmail.com>",
+  "license": "MIT"
+}
