@@ -17,6 +17,11 @@
 
 * ref: https://webpack.github.io
 * ref: https://github.com/d3viant0ne/awesome-webpack
+* Install globally: `npm install webpack -g`
+* Install locally: `npm install webpack --save-dev`
+* Install dev tools: `npm install webpack-dev-server --save-dev`
+* Create config file: `touch webpack.config.js`
+
 
 ### Setup SASS
 ### Setup Flexbox
