@@ -1,7 +1,9 @@
 # Simply Events Client for Browser
 
-### Setup Node & NPM
+### Setup node & npm
 
+* ref: https://nodejs.org
+* ref: https://www.npmjs.com
 * Upgrade brew: `brew upgrade`
 * Fix brew: `brew doctor`
 * Check node version: `node -v`
@@ -11,17 +13,88 @@
 * Update packages: `npm update`
 * Test update status: `npm outdated`
 
+### Create directory structure
 
-### Follow Create-App file structure
+```
+app
+dist/
+src/
+.gitignore
+license.txt
+README.md
+```
+
+### Initialize npmnode
+
+* ref: https://www.npmjs.com
+* Create npm: `npm init`
+
 ### Setup Webpack
 
 * ref: https://webpack.github.io
 * ref: https://github.com/d3viant0ne/awesome-webpack
 * Install globally: `npm install webpack -g`
-* Install locally: `npm install webpack --save-dev`
-* Install dev tools: `npm install webpack-dev-server --save-dev`
+* Install locally: `npm install --save-dev webpack`
+* Install dev tools: `npm install --save-dev webpack-dev-server`
+* Install webpack html module: `npm install --save-dev html-webpack-plugin`
 * Create config file: `touch webpack.config.js`
+* Setup the basic config:
 
+```js
+module.exports = {
+  entry: "./src/index.js",
+  output: {
+    path: "./dist",
+    filename: "index_production.js",
+  },
+};
+```
+
+* Run `webpack` to render `bin/app.bundle.js`
+
+### Setup webpack with babel
+
+* Install babel core: `npm install --save-dev babel-core`
+* Install babel loader: `npm install --save-dev babel-loader`
+* Install babel for react: `npm install --save-dev babel-preset-react`
+* Add loader in webpack:
+
+```
+module: {
+  loaders: [
+    {
+      test: /\.js$/,
+      exclude: /node_modules/,
+      loader: "babel-loader",
+    },
+  ],
+},
+```
+
+* Add babel config: `touch .babelrc`
+
+### Setup HTMLWebpackPlugin
+
+* Add plugin to `webpack.config.js`:
+
+```
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
+  template: "./src/index.html",
+  filename: "index.html",
+  inject: "body",
+});
+
+...
+
+
+```
+
+
+### Setup React and ReactDom
+
+* Install react: `npm install --save react`
+* Install react-dom: `npm install --save react-dom`
 
 ### Setup SASS
 ### Setup Flexbox
