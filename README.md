@@ -1,9 +1,25 @@
 # Simply Events Client for Browser
 
-* Follow Create-App file structure
-* Setup Webpack
-* Setup SASS
-* Setup Flexbox
+### Setup Node & NPM
+
+* Upgrade brew: `brew upgrade`
+* Fix brew: `brew doctor`
+* Check node version: `node -v`
+* Set latest node version: `node latest`
+* Check npm version: `npm -v`
+* Update npm: `npm install npm@latest -g`
+* Update packages: `npm update`
+* Test update status: `npm outdated`
+
+
+### Follow Create-App file structure
+### Setup Webpack
+
+* ref: https://webpack.github.io
+* ref: https://github.com/d3viant0ne/awesome-webpack
+
+### Setup SASS
+### Setup Flexbox
 
 ### Setup ESLint
 
@@ -58,3 +74,6 @@ npm install --save-dev eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin
 ### Setup Rollbar or Sentry
 ### Setup Github Project
 ### Setup Circle CI
+
+* use eslint to check
+* use mocha to check
