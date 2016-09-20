@@ -24,7 +24,7 @@ license.txt
 README.md
 ```
 
-### Initialize npmnode
+### Initialize npm
 
 * ref: https://www.npmjs.com
 * Create npm: `npm init`
@@ -73,6 +73,10 @@ module: {
 
 * Add babel config: `touch .babelrc`
 
+## Setup webpack with ES6
+
+* ref: https://es6.io/account/access/578d8172cf4f29f533cd4280/view/174357593
+
 ### Setup HTMLWebpackPlugin
 
 * Add plugin to `webpack.config.js`:
@@ -96,6 +100,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 * Install react: `npm install --save react`
 * Install react-dom: `npm install --save react-dom`
 
+### Setup sourcemaps
 ### Setup SASS
 ### Setup Flexbox
 

@@ -5,8 +5,10 @@
   "repository": "https://github.com/wrburgess/simply-events-client-browser.git",
   "main": "index.js",
   "scripts": {
-    "test": "test",
-    "lint": "eslint src"
+    "build": "webpack -p",
+    "lint": "eslint src",
+    "start": "webpack-dev-server",
+    "test": "test"
   },
   "author": "Randy Burgess <wrburgess@gmail.com>",
   "license": "MIT",
@@ -17,6 +19,7 @@
   "devDependencies": {
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
     "babel-preset-react": "^6.11.1",
     "eslint": "^3.5.0",
     "eslint-config-airbnb": "^11.1.0",

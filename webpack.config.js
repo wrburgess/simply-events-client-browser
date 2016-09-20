@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: "./src/index.html",
   filename: "index.html",
@@ -6,7 +7,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 });
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/index.jsx",
   output: {
     path: "./dist",
     filename: "index_production.js",
@@ -14,9 +15,12 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.js$|\.jsx$/,
         exclude: /node_modules/,
         loader: "babel-loader",
+        query: {
+          presets: ["es2015"],
+        },
       },
     ],
   },

@@ -1,8 +1,8 @@
 {
   "env": {
-    "es6": true,
     "browser": true,
-    "mocha": true
+    "es6": true,
+    "mocha": true,
   },
   "extends": "airbnb",
   "rules": {
