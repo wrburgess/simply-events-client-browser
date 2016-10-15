@@ -1,9 +1,10 @@
 # Simply Events Client for Browser
 
-### Setup node & npm
+### Setup node & yarn
 
 * ref: https://nodejs.org
-* ref: https://www.npmjs.com
+* ref: https://yarnpkg.com
+* Upgrade brew: `brew update`
 * Upgrade brew: `brew upgrade`
 * Fix brew: `brew doctor`
 * Check node version: `node -v`
@@ -160,3 +161,8 @@ npm install --save-dev eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin
 
 * use eslint to check
 * use mocha to check
+
+### CSS
+
+* Utilize Flexbox wherever possible
+* ref: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
