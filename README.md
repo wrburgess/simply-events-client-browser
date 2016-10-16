@@ -1,6 +1,6 @@
 # Simply Events Client for Browser
 
-### Setup node & yarn
+### Setup brew, node & yarn
 
 * ref: https://nodejs.org
 * ref: https://yarnpkg.com
