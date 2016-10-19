@@ -3,41 +3,47 @@
 ### Setup brew, node & yarn
 
 * ref: https://nodejs.org
-* ref: https://yarnpkg.com
 * Upgrade brew: `brew update`
 * Upgrade brew: `brew upgrade`
 * Fix brew: `brew doctor`
 * Check node version: `node -v`
-* Set latest node version: `node latest`
-* Check npm version: `npm -v`
-* Update npm: `npm install npm@latest -g`
-* Update packages: `npm update`
-* Test update status: `npm outdated`
 
-### Create directory structure
+### Create the basic directory/file structure
 
 ```
 app
 dist/
 src/
+  actions/
+  components/
+  containers/
+  reducers/
+  index.js
+  index.html
+specs/
 .gitignore
 license.txt
 README.md
 ```
 
-### Initialize npm
+### Initialize and use yarn
 
-* ref: https://www.npmjs.com
-* Create npm: `npm init`
+* ref: https://yarnpkg.com
+* Create npm: `yarn init`
+* Check yarn version: `yarn -v`
+* Install yarn packages: `yarn install`
+* Remove yarn packages: `yarn remove`
+* Upgrade packages: `yarn upgrade`
+* Upgrade status: `yarn outdated`
 
-### Setup Webpack
+### Setup webpack
 
 * ref: https://webpack.github.io
 * ref: https://github.com/d3viant0ne/awesome-webpack
-* Install globally: `npm install webpack -g`
-* Install locally: `npm install --save-dev webpack`
-* Install dev tools: `npm install --save-dev webpack-dev-server`
-* Install webpack html module: `npm install --save-dev html-webpack-plugin`
+* Install globally: `yarn add webpack -g`
+* Install locally: `yarn add --dev webpack`
+* Install dev tools: `yarn add --dev webpack-dev-server`
+* Install webpack html module: `yarn add --dev html-webpack-plugin`
 * Create config file: `touch webpack.config.js`
 * Setup the basic config:
 
@@ -55,9 +61,9 @@ module.exports = {
 
 ### Setup webpack with babel
 
-* Install babel core: `npm install --save-dev babel-core`
-* Install babel loader: `npm install --save-dev babel-loader`
-* Install babel for react: `npm install --save-dev babel-preset-react`
+* Install babel core: `yarn add --dev babel-core`
+* Install babel loader: `yarn add --dev babel-loader`
+* Install babel for react: `yarn add --dev babel-preset-react`
 * Add loader in webpack:
 
 ```
@@ -98,8 +104,8 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 ### Setup React and ReactDom
 
-* Install react: `npm install --save react`
-* Install react-dom: `npm install --save react-dom`
+* Install react: `yarn add --save react`
+* Install react-dom: `yarn add --save react-dom`
 
 ### Setup sourcemaps
 ### Setup SASS
@@ -109,8 +115,8 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 * ref: http://eslint.org
 * ref: https://github.com/dustinspecker/awesome-eslint
-* install global: `npm install eslint -g`
-* install local: `npm install eslint --save-dev`
+* install global: `yarn add eslint -g`
+* install local: `yarn add eslint --dev`
 * setup config: `touch .eslintrc`
 * write config:
 
@@ -134,18 +140,18 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   * install airbnb config global:
 
 ```
-npm install -g eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-import eslint-plugin-react
+yarn add -g eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-import eslint-plugin-react
 ```
 
   * install airbnb config local:
 
 ```
-npm install --save-dev eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-import eslint-plugin-react
+yarn add --dev eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-import eslint-plugin-react
 ```
 
 * In `.eslintrc`, change `"extends": "airbnb"`
-* Add `eslint-plugin-html` with `npm install -g eslint-plugin-html`
-* Add `eslint-plugin-html` with `npm install --save-dev eslint-plugin-html`
+* Add `eslint-plugin-html` with `yarn add -g eslint-plugin-html`
+* Add `eslint-plugin-html` with `yarn add --dev eslint-plugin-html`
 * Add plugin settings to `.eslintrc`
 
 ### Setup Mocha, Chai, Enzyme, Sinon/Test Double

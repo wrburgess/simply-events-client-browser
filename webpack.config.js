@@ -7,10 +7,10 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 });
 
 module.exports = {
-  entry: "./src/index.jsx",
+  entry: "./src/index.js",
   output: {
     path: "./dist",
-    filename: "index_production.js",
+    filename: "index.js",
   },
   module: {
     loaders: [
