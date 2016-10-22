@@ -40,17 +40,18 @@ README.md
 ### Setup webpack
 
 * ref: https://webpack.github.io
+* ref: https://webpack.github.io/docs/webpack-dev-server.html
 * ref: https://github.com/d3viant0ne/awesome-webpack
 * Install globally: `yarn add webpack -g`
 * Install locally: `yarn add --dev webpack`
 * Install dev tools: `yarn add --dev webpack-dev-server`
-* Install webpack html module: `yarn add --dev html-webpack-plugin`
+* Install plugin for js/html injection: `yarn add --dev html-webpack-plugin`
 * Create config file: `touch webpack.config.js`
 * Setup the basic config:
 
 ```js
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/index.jsx",
   output: {
     path: "./dist",
     filename: "index_production.js",
@@ -99,6 +100,7 @@ module: {
 
 ### Setup HTMLWebpackPlugin
 
+* ref: https://github.com/ampedandwired/html-webpack-plugin
 * Add plugin to `webpack.config.js`:
 
 ```js
@@ -109,13 +111,19 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: "body",
 });
 
-...
+module.exports = {
+  //...
 
-
+  plugins: [
+    HtmlWebpackPluginConfig,
+  ],
+};
 ```
 
 ### Setup React and ReactDom
 
+* ref: https://facebook.github.io/react/
+* ref: https://www.npmjs.com/package/react-dom
 * Install react: `yarn add react`
 * Install react-dom: `yarn add react-dom`
 

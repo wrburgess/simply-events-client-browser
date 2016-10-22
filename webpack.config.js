@@ -4,6 +4,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: "./src/index.html",
   filename: "index.html",
   inject: "body",
+  hash: true,
 });
 
 module.exports = {
@@ -21,9 +22,6 @@ module.exports = {
         test: /\.js$|\.jsx$/,
         exclude: /node_modules/,
         loader: "babel-loader",
-        query: {
-          presets: ["es2015"],
-        },
       },
     ],
   },
