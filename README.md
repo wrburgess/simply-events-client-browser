@@ -18,9 +18,10 @@ src/
   components/
   containers/
   reducers/
-  index.js
+  index.jsx
   index.html
 specs/
+  components/
 .gitignore
 license.txt
 README.md
@@ -54,6 +55,9 @@ module.exports = {
     path: "./dist",
     filename: "index_production.js",
   },
+  resolve: {
+    extensions: ["", ".js", ".jsx"],
+  },
 };
 ```
 
@@ -66,7 +70,7 @@ module.exports = {
 * Install babel for react: `yarn add --dev babel-preset-react`
 * Add loader in webpack:
 
-```
+```js
 module: {
   loaders: [
     {
@@ -80,6 +84,15 @@ module: {
 
 * Add babel config: `touch .babelrc`
 
+```js
+{
+  "presets": [
+    "es2015",
+    "react",
+  ]
+}
+```
+
 ## Setup webpack with ES6
 
 * ref: https://es6.io/account/access/578d8172cf4f29f533cd4280/view/174357593
@@ -88,7 +101,7 @@ module: {
 
 * Add plugin to `webpack.config.js`:
 
-```
+```js
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: "./src/index.html",
@@ -101,11 +114,10 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 ```
 
-
 ### Setup React and ReactDom
 
-* Install react: `yarn add --save react`
-* Install react-dom: `yarn add --save react-dom`
+* Install react: `yarn add react`
+* Install react-dom: `yarn add react-dom`
 
 ### Setup sourcemaps
 ### Setup SASS
@@ -155,6 +167,35 @@ yarn add --dev eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-import 
 * Add plugin settings to `.eslintrc`
 
 ### Setup Mocha, Chai, Enzyme, Sinon/Test Double
+
+* ref: https://mochajs.org
+* ref: http://chaijs.com
+* ref: https://github.com/airbnb/enzyme
+* ref: https://github.com/producthunt/chai-enzyme
+* Add `mocha` with `yarn add mocha --dev`
+* Add `chai` with `yarn add chai --dev`
+* Add `enzyme` with `yarn add enzyme --dev`
+* Add `chai-enzyme` with `yarn add chai-enzyme --dev`
+* Add `react-addons-test-utils` with `yarn react-addons-test-utils --dev`
+* Add a `spec_helper.js` file with `touch specs/spec_helper.js` with these instructions:
+
+```js
+import chai from "chai";
+import chaiEnzyme from "chai-enzyme";
+
+chai.use(chaiEnzyme());
+```
+
+* Add a test runner script to `package.json`:
+
+```js
+"scripts": {
+    // ...
+    "test": "mocha './specs/**/*_spec.js' --compilers js:babel-core/register --require './specs/spec_helper.js'"
+    // ...
+  }
+```
+
 ### Consider Immutable.js
 ### Setup React
 ### Setup Redux
