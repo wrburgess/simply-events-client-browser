@@ -1,16 +1,16 @@
 import React, { Component } from "react";
-import Header from "./header";
-import Footer from "./footer";
+import HeaderContainer from "../containers/HeaderContainer";
+import FooterContainer from "../containers/FooterContainer";
 
 class App extends Component {
   render() {
     return (
-      <div id="main">
-        <Header />
+      <div id="window">
+        <HeaderContainer />
         <div id="content">
           This is a test with React
         </div>
-        <Footer />
+        <FooterContainer />
       </div>
     );
   }

@@ -8,7 +8,7 @@
     "build": "webpack -p",
     "lint": "eslint src",
     "start": "webpack-dev-server",
-    "test": "mocha --compilers js:babel-core/register './specs/**/*_spec.js' --require specs/spec_helper.js "
+    "test": "mocha --compilers js:babel-core/register './specs/**/*_spec.jsx' --require specs/spec_helper.jsx"
   },
   "author": "Randy Burgess <wrburgess@gmail.com>",
   "license": "MIT",

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import styles from "../stylesheets/header.scss";
 
-const Header = () => {
+const Header = (props) => {
   return(
-    <header>
-      This is the header
+    <header className="header">
+      This is the header!
     </header>
   );
 }
