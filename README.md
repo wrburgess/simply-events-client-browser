@@ -129,7 +129,76 @@ module.exports = {
 
 ### Setup sourcemaps
 ### Setup SASS
-### Setup Flexbox
+
+* ref: https://github.com/webpack/extract-text-webpack-plugin
+* ref: https://github.com/webpack/css-loader
+* ref: https://github.com/jtangelder/sass-loader
+* ref: http://www.davidmeents.com/journey-into-react-part-4-styling-with-scss-and-webpack/
+* Install extract-text-webpack-plugin: `yarn add --dev extract-text-webpack-plugin`
+* Install css-loader: `yarn add --dev css-loader`
+* Install sass-loader: `yarn add --dev sass-loader`
+* Install style-loader: `yarn add --dev node-sass`
+* Add a new loader to webpack.config.js:
+
+```
+module.exports = {
+
+  // ...
+
+  module: {
+    loaders: [
+      {
+        // ...
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract("css!sass"),
+      },
+    ],
+  },
+```
+
+* Prevent mocha from compiling css by installing the following in the `spec_helper.js` file:
+
+```
+// Prevent Mocha from compiling class
+function noop() {
+  return null;
+}
+
+require.extensions[".css"] = noop;
+require.extensions[".scss"] = noop;
+```
+
+* Add the plugin config:
+
+```
+const ExtractTextPluginConfig = new ExtractTextPlugin(
+  "index.css",
+  { allChunks: true }
+);
+```
+
+* Install the plugin:
+
+```
+  plugins: [
+    HtmlWebpackPluginConfig,
+    ExtractTextPluginConfig
+  ],
+```
+
+* Import css files into component files, like so:
+
+```js
+// header.jsx
+
+import styles from "../stylesheets/header.scss";
+
+```
+
+
+
 
 ### Setup ESLint
 

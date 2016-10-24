@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   template: "./src/index.html",
@@ -6,6 +7,11 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: "body",
   hash: true,
 });
+
+const ExtractTextPluginConfig = new ExtractTextPlugin(
+  "index.css",
+  { allChunks: true }
+);
 
 module.exports = {
   entry: "./src/index.jsx",
@@ -23,9 +29,14 @@ module.exports = {
         exclude: /node_modules/,
         loader: "babel-loader",
       },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract("css!sass"),
+      },
     ],
   },
   plugins: [
     HtmlWebpackPluginConfig,
+    ExtractTextPluginConfig,
   ],
 };
