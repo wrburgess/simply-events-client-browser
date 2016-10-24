@@ -38,8 +38,7 @@ jspm_packages
 .node_repl_history
 
 # production
-
-
+dist
 
 # Mac files
 .DS_Store
