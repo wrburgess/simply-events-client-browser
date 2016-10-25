@@ -9,7 +9,11 @@
     "no-console": "warn"
   },
   "plugins": [
-    "html"
+    "html",
+    "import",
+    "jsx-a11y"
+    "mocha",
+    "react"
   ]
 }
 

@@ -197,17 +197,15 @@ import styles from "../stylesheets/header.scss";
 
 ```
 
-
-
-
 ### Setup ESLint
 
 * ref: http://eslint.org
 * ref: https://github.com/dustinspecker/awesome-eslint
+* ref: https://github.com/lo1tuma/eslint-plugin-mocha
 * install global: `yarn add eslint -g`
 * install local: `yarn add eslint --dev`
-* setup config: `touch .eslintrc`
-* write config:
+* install local: `yarn add eslint-plugin-mocha --dev`
+* setup config: `touch .eslintrc` and install:
 
 ```js
 {
@@ -221,27 +219,43 @@ import styles from "../stylesheets/header.scss";
     "no-console": "warn"
   },
   "plugins": [
-    "html"
+    "html",
+    "mocha"
   ]
 }
 ```
 
-  * install airbnb config global:
+* install airbnb config global:
 
 ```
 yarn add -g eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-import eslint-plugin-react
 ```
 
-  * install airbnb config local:
+* ref: https://github.com/airbnb/javascript
+* ref: https://github.com/benmosher/eslint-plugin-import
+* ref: https://github.com/evcohen/eslint-plugin-jsx-a11y
+* ref: https://github.com/benmosher/eslint-plugin-import
+* ref: https://github.com/yannickcr/eslint-plugin-react
+* Install `eslint-plugin-html` with `yarn add -g eslint-plugin-html`
+* Install `eslint-plugin-html` with `yarn add --dev eslint-plugin-html`
+* install airbnb config local:
 
 ```
 yarn add --dev eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-import eslint-plugin-react
 ```
 
 * In `.eslintrc`, change `"extends": "airbnb"`
-* Add `eslint-plugin-html` with `yarn add -g eslint-plugin-html`
-* Add `eslint-plugin-html` with `yarn add --dev eslint-plugin-html`
-* Add plugin settings to `.eslintrc`
+* Add plugin settings to `.eslintrc`:
+
+```
+  "plugins": [
+    "html",
+    "import",
+    "jsx-a11y"
+    "mocha",
+    "react"
+  ]
+```
 
 ### Setup Mocha, Chai, Enzyme, Sinon/Test Double
 
