@@ -228,11 +228,10 @@ import styles from "../stylesheets/header.scss";
 * install airbnb config global:
 
 ```
-yarn add -g eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-import eslint-plugin-react
+yarn global add eslint-config-airbnb eslint-plugin-jsx-a11y eslint-plugin-import eslint-plugin-react
 ```
 
 * ref: https://github.com/airbnb/javascript
-* ref: https://github.com/benmosher/eslint-plugin-import
 * ref: https://github.com/evcohen/eslint-plugin-jsx-a11y
 * ref: https://github.com/benmosher/eslint-plugin-import
 * ref: https://github.com/yannickcr/eslint-plugin-react
@@ -282,7 +281,7 @@ chai.use(chaiEnzyme());
 ```js
 "scripts": {
     // ...
-    "test": "mocha './specs/**/*_spec.js' --compilers js:babel-core/register --require './specs/spec_helper.js'"
+    "test": "mocha './specs/**/*_spec.jsx' --compilers js:babel-core/register --require './specs/spec_helper.jsx'"
     // ...
   }
 ```

@@ -1,12 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import styles from "../stylesheets/header.scss";
 
-const Header = (props) => {
-  return(
+const Header = () => {
+  return (
     <header className="header">
-      This is the header!
+      Only is the header!
     </header>
   );
-}
+};
 
 export default Header;

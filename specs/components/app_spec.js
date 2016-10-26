@@ -16,7 +16,7 @@ describe("<App />", () => {
     expect(wrapper).to.have.descendants(Footer);
   });
 
-  it("contains the correct html", () => {
+  it('contains the correct html',()=>{
     const wrapper = shallow(<App />);
     expect(wrapper).to.have.id("window");
     expect(wrapper.find("#content")).to.have.html("<div id=\"content\">This is a test with React</div>");
